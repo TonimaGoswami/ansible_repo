@@ -1,0 +1,12 @@
+---
+- name: apt playbook
+  hosts:  javaservers
+  tasks:
+    - name: install software package
+      apt: 
+        name: curl
+        state: present
+        update_cache: yes
+      become: yes
+
+...

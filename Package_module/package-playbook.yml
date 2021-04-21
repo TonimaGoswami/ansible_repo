@@ -1,0 +1,15 @@
+---
+- name: package playbook
+  hosts: javaservers
+  tasks:
+    - name: use generic installer
+      package: 
+        name: net-tools
+        state: present
+      become: yes
+    # - name: use generic installer to uninstall package
+    #   package: 
+    #     name: net-tools
+    #     state: absent
+    #   become: yes
+...
