@@ -1,0 +1,9 @@
+#This playbook is using when section in task
+- name: This will work based on when statement
+  hosts: all
+  tasks:
+    - name: This will write info into a file under /tmp
+      copy: 
+        dest: /tmp/when_file.txt
+        content: "This file is created based on when statement"
+      when: true
